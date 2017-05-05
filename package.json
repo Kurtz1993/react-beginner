@@ -6,11 +6,12 @@
   "license": "MIT",
   "scripts": {
     "prestart": "babel-node tools/start-message.js",
-    "start": "npm-run-all --parallel open:src lint:watch",
+    "start": "npm-run-all --parallel open:src lint:watch test:watch",
     "open:src": "babel-node tools/src-server.js",
     "lint": "esw webpack.config.* src tools",
     "lint:watch": "npm run lint -- --watch",
-    "test": "mocha --reporter progress tools/test-setup.js \"src/**/*.js\""
+    "test": "mocha --reporter progress tools/test-setup.js \"src/**/*.js\"",
+    "test:watch": "npm run test -- --watch"
   },
   "dependencies": {
     "babel-polyfill": "6.8.0",
