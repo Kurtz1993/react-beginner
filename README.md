@@ -1,1 +1,1 @@
-# react-beginner
+# react-redux
