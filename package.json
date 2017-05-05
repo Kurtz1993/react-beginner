@@ -6,7 +6,8 @@
   "license": "MIT",
   "scripts": {
     "prestart": "babel-node tools/start-message.js",
-    "start": "babel-node tools/src-server.js",
+    "start": "npm-run-all --parallel open:src lint:watch",
+    "open:src": "babel-node tools/src-server.js",
     "lint": "esw webpack.config.* src tools",
     "lint:watch": "npm run lint -- --watch"
   },
