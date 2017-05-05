@@ -9,7 +9,8 @@
     "start": "npm-run-all --parallel open:src lint:watch",
     "open:src": "babel-node tools/src-server.js",
     "lint": "esw webpack.config.* src tools",
-    "lint:watch": "npm run lint -- --watch"
+    "lint:watch": "npm run lint -- --watch",
+    "test": "mocha --reporter progress tools/test-setup.js \"src/**/*.js\""
   },
   "dependencies": {
     "babel-polyfill": "6.8.0",
