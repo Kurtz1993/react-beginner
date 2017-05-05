@@ -7,7 +7,8 @@
   "scripts": {
     "prestart": "babel-node tools/start-message.js",
     "start": "babel-node tools/src-server.js",
-    "lint": "esw webpack.config.* src tools"
+    "lint": "esw webpack.config.* src tools",
+    "lint:watch": "npm run lint -- --watch"
   },
   "dependencies": {
     "babel-polyfill": "6.8.0",
