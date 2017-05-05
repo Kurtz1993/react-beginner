@@ -4,6 +4,9 @@
   "description": "Starter kit for React and Redux Pluralsight course by Cory House",
   "author": "Cory House",
   "license": "MIT",
+  "scripts": {
+    "start": "babel-node tools/srcServer.js"
+  },
   "dependencies": {
     "babel-polyfill": "6.8.0",
     "bootstrap": "3.3.6",
