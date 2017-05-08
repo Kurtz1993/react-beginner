@@ -5,18 +5,22 @@ class CoursePage extends React.Component {
         super(props, context);
 
         this.state = {
-            course: { title: null }
+            course: { title: '' }
         };
+
+        this.onClickSave = this.onClickSave.bind(this);
+        this.onTitleChange = this.onTitleChange.bind(this);
     }
-    onTitleChange = (event) => {
+    onTitleChange(event) {
         const course = this.state.course;
         course.title = event.target.value;
         this.setState({ course });
     }
 
-    onClickSave = () => {
-
+    onClickSave() {
+        alert(`Saving ${this.state.course.title}`);
     };
+
     render() {
         return (
             <div>
