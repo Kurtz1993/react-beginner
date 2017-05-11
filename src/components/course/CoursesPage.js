@@ -19,7 +19,7 @@ class CoursePage extends React.Component {
 
     onClickSave() {
         alert(`Saving ${this.state.course.title}`);
-    };
+    }
 
     render() {
         return (
