@@ -24,6 +24,9 @@ class CoursePage extends React.Component {
         this.props.actions.createCourse(
             this.state.course
         );
+        this.setState({
+            course: { title: '' }
+        });
     }
 
     courseRow(course, index) {
